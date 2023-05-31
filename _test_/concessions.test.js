@@ -15,8 +15,7 @@ describe("getConcessionByIDs()",() => {
       const input = { id: "g9sZdG1hI" };
       const actual = getConcessionByID(cData,input);
        expect(input.id).toEqual("g9sZdG1hI");
-       //const expected= input.id
-      //expect(actual).toEqual(expected);
+       
       
     });
 
@@ -32,7 +31,7 @@ describe("getConcessionByIDs()",() => {
 
 
 
-//const myObj= require("../data/concessions");
+
 
 describe ("calculateTotalFromIDs()",() => {
     test("should return total of purchases by given ID", () =>{
@@ -40,7 +39,6 @@ describe ("calculateTotalFromIDs()",() => {
       const actual = calculateTotalFromIDs(cData,input.id);
       const expected = 749;
       expect(input.priceInCents).toEqual(expected)
-      //expect(actual).toEqual(expected);
       
     });
 

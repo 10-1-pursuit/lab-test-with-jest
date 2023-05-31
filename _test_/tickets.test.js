@@ -6,7 +6,7 @@ const  {
   calculateTotalFromTicketNames
 
 } = require("../src/tickets");
-//const data= require("../data/tickets")
+
 describe("getTicketByName()",() => {
     test("should return ticket by Name", () =>{
       const input = { id: "uD_PoicNN", name: "Adult Regular", priceInCents: 1369 };
@@ -28,16 +28,6 @@ describe("getTicketByName()",() => {
 
 });
 
-
-
-
-
-
-
-
-
-
-//const myObj= require("../data/tickets");
 
 describe("calculateTotalFromTicketNames()",() => {
     test("should calculate total ticket price by Name", () =>{

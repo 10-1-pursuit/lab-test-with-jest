@@ -1,9 +1,8 @@
-//const getConcessionByID=require(arrayData);
-//const calculateTotalFromIDs=require(arrayData);
+
 
 const cData = require("../data/concessions");
 
-//const arrayData2=require("../data/concessions")
+//**********DO NOT CHANGE DATA ABOVE THIS LINE
 /**
  * Returns a concession object by ID.
  * @param {Object[]} concessions An array of concession objects
@@ -30,6 +29,6 @@ function calculateTotalFromIDs(concessions, ids) {
   }
   return total;
 }
-
+//***********DO NOT CHANGE DATA BELOW THIS LINE
 module.exports= {getConcessionByID,
 calculateTotalFromIDs};
