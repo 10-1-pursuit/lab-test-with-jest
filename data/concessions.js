@@ -1,7 +1,23 @@
-module.exports = [
+const  cData= [
   { id: "g9sZdG1hI", name: "Small Popcorn", priceInCents: 929 },
   { id: "0Qs9Yp2NL", name: "Large Popcorn", priceInCents: 1029 },
   { id: "KzWBehRAD", name: "Small Soda", priceInCents: 699 },
   { id: "NEHAsbTYk", name: "Large Soda", priceInCents: 749 },
   { id: "rNVCeVsri", name: "Candy", priceInCents: 569 },
 ];
+
+const ids=[
+
+  { id: "g9sZdG1hI"}, 
+  { id: "0Qs9Yp2NL"}, 
+  { id: "KzWBehRAD"}, 
+  { id: "NEHAsbTYk"}, 
+  { id: "rNVCeVsri"},
+];
+
+
+
+
+
+
+ module.exports= cData,ids;

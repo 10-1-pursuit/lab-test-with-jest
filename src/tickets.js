@@ -1,3 +1,6 @@
+const tData = require("../data/tickets");
+//DO NOT CHANGE DATA ABOVE THIS LINE
+
 /**
  * Returns a ticket object when given the name.
  * @param {Object[]} tickets An array of ticket objects
@@ -28,3 +31,6 @@ function calculateTotalFromTicketNames(tickets, names) {
   }
   return total;
 }
+//DO NOT CHANGE DATA BELOW THIS LINE
+module.exports={getTicketByName,
+calculateTotalFromTicketNames,};
