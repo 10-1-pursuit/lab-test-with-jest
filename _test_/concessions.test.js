@@ -10,7 +10,7 @@ const  {
 
 
 describe("getConcessionByIDs()",() => {
-    test("should return and ID", () =>{
+    test("should return an ID", () =>{
       
       const input = { id: "g9sZdG1hI" };
       const actual = getConcessionByID(cData,input);

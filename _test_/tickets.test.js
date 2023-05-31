@@ -14,6 +14,8 @@ describe("getTicketByName()",() => {
       const expected = "adult regular";
       expect(input.name.toLocaleLowerCase()).toBe(expected);
      
+     
+     
       
     });
 
@@ -30,7 +32,7 @@ describe("getTicketByName()",() => {
 
 
 describe("calculateTotalFromTicketNames()",() => {
-    test("should calculate total ticket price by Name", () =>{
+    test("should calculate total ticket price by Ticket Name", () =>{
       const input = [
         { id: "6ha0u__54", name: "Adult Matinee", priceInCents: 949 },
         { id: "dlb8ka9N_", name: "Senior Matinee", priceInCents: 839 },
