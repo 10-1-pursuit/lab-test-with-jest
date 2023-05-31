@@ -1,3 +1,9 @@
+const tData = require("../data/tickets");
+//const arrayData=require("../data/concessions")
+//const {getTicketByName,calculateTotalFromTicketNames}=require(arrayData2);
+//const calculateTotalFromTicketNames=require("../data/tickets");
+
+
 /**
  * Returns a ticket object when given the name.
  * @param {Object[]} tickets An array of ticket objects
@@ -28,3 +34,6 @@ function calculateTotalFromTicketNames(tickets, names) {
   }
   return total;
 }
+
+module.exports={getTicketByName,
+calculateTotalFromTicketNames,};
