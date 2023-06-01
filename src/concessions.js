@@ -1,3 +1,5 @@
+const concessions = require('../data/concessions');
+
 /**
  * Returns a concession object by ID.
  * @param {Object[]} concessions An array of concession objects
