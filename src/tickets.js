@@ -1,3 +1,5 @@
+const tickets = require("../data/tickets")
+
 /**
  * Returns a ticket object when given the name.
  * @param {Object[]} tickets An array of ticket objects
@@ -28,3 +30,8 @@ function calculateTotalFromTicketNames(tickets, names) {
   }
   return total;
 }
+
+module.exports = {
+  getTicketByName,
+  calculateTotalFromTicketNames
+};
