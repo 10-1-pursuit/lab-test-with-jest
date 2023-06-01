@@ -1,5 +1,5 @@
 const tickets = require("../data/tickets");
-console.log(tickets);
+
 /**
  * Returns a ticket object when given the name.
  * @param {Object[]} tickets An array of ticket objects
@@ -13,7 +13,7 @@ function getTicketByName(tickets, name) {
 
   return result || null;
 }
-
+console.log(getTicketByName(tickets, "Adult Regular"));
 /**
  * Calculates a total based on the given ticket names.
  * @param {Object[]} tickets An array of ticket objects

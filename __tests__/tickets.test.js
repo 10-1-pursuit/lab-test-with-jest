@@ -7,12 +7,22 @@ const tickets = require("../data/tickets");
 console.log(tickets);
 
 describe("getTicketByName", () => {
-  test("a description of what is being tested", () => {
-    // test code
+  test("should return a ticket object by name given", () => {
+    const name = "Adult Regular";
+    const actual = getTicketByName(tickets, name);
+    const expected = {
+      id: "uD_PoicNN",
+      name: "Adult Regular",
+      priceInCents: 1369,
+    };
+    expect(actual).toEqual(expected);
   });
 
-  test("this description should be in the form of a sentence", () => {
-    // test code
+  test("should return `null` if a matching name cannot be found", () => {
+    const name = "Regular Admission";
+    const actual = getTicketByName(tickets, name);
+    const expected = null;
+    expect(actual).toEqual(expected);
   });
 });
 
