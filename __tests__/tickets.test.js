@@ -26,7 +26,7 @@ describe("getTicketByName", () => {
 });
 
 describe("calculateTotalFromTicketNames", () => {
-  test("calculate a total priceInCents based on array of concession IDs", () => {
+  test("calculate a total priceInCents based on array of ticket names", () => {
     const names = ["Senior Matinee", "Child Matinee", "Senior Regular"];
     const expectedTotal1 = 2727;
     const actualTotal1 = calculateTotalFromTicketNames(tickets, names);
