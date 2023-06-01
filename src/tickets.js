@@ -13,7 +13,7 @@ function getTicketByName(tickets, name) {
 
   return result || null;
 }
-console.log(getTicketByName(tickets, "Adult Regular"));
+
 /**
  * Calculates a total based on the given ticket names.
  * @param {Object[]} tickets An array of ticket objects

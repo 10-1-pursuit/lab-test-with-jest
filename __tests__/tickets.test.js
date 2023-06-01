@@ -4,7 +4,6 @@ const {
 } = require("../src/tickets");
 
 const tickets = require("../data/tickets");
-console.log(tickets);
 
 describe("getTicketByName", () => {
   test("should return a ticket object by name given", () => {
@@ -27,27 +26,27 @@ describe("getTicketByName", () => {
 });
 
 describe("calculateTotalFromTicketNames", () => {
-  test("a description of what is being tested", () => {
-    // test code
+  test("calculate a total priceInCents based on array of concession IDs", () => {
+    const names = ["Senior Matinee", "Child Matinee", "Senior Regular"];
+    const expectedTotal1 = 2727;
+    const actualTotal1 = calculateTotalFromTicketNames(tickets, names);
+    expect(actualTotal1).toBe(expectedTotal1);
+
+    const names2 = ["Senior Matinee", "Adult Regular", "Child Regular"];
+    const expectedTotal2 = 3277;
+    const actualTotal2 = calculateTotalFromTicketNames(tickets, names2);
+    expect(actualTotal2).toBe(expectedTotal2);
+
+    const names3 = ["Adult Matinee", "Adult Regular"];
+    const expectedTotal3 = 2318;
+    const actualTotal3 = calculateTotalFromTicketNames(tickets, names3);
+    expect(actualTotal3).toBe(expectedTotal3);
   });
 
-  test("this description should be in the form of a sentence", () => {
-    // test code
+  test("uses a for/of loop", () => {
+    const funcString = calculateTotalFromTicketNames.toString();
+    expect(funcString.includes("for")).toBe(true);
+    expect(funcString.includes("of")).toBe(true);
+    expect(funcString.includes("while")).toBe(false);
   });
 });
-
-
-/*
-lescribe.only ('getTicketByName", () => {
-Run | Debug
-it ('what happens the name is gary', () => {
-/ test code
-expect (getTicketByName (data, 'gary')) .toße(null);
-});
-Run | Debug
-it ('what happens when the name is adult matinee', () =› {
-/ test code
-expect (getTicketByName (data, 'Adult Matinee')) .toStrictEqual ({
-id: 'Ghaou__54', name: 'Adult Matinee' priceInCents: 949, ]);
-*/
-
