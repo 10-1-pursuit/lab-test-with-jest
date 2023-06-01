@@ -1,19 +1,20 @@
 
-const { getConcessionByID, calculateTotalFromIDs } = ("../src/concessions.js")
-const concessionsData = ("../data/concessions.js")
+const { getConcessionByID, calculateTotalFromIDs } = require("../src/concessions.js")
+const concessions = require("../data/concessions.js")
 
-describe("getConcessionByID", () => {
+describe("getConcessionByID()", () => {
 
   test("Should return null if no concession item with that ID is found.", () => {
-
-    const actual = getConcessionByID(concessionsData, "14038")
+    const id = "14038"
+    const actual = getConcessionByID(concessions, id)
     const expected = null;
-    expect(actual).toStrictEqual(expected);
-  })
+    expect(actual).toEqual(expected);
+
+  });
 
   test("Should return the object associated with concession ID.", () => {
-
-    const actual = getConcessionByID(concessionsData, "rNVCeVsri")
+    const id = "rNVCeVsri"
+    const actual = getConcessionByID(concessions, id)
     const expected = { id: "rNVCeVsri", name: "Candy", priceInCents: 569 };
     expect(actual).toStrictEqual(expected);
 
@@ -21,15 +22,15 @@ describe("getConcessionByID", () => {
 });
 
 
-describe("calculateTotalFromIDs", () => {
+describe("calculateTotalFromIDs()", () => {
 
   test("The total value of all concessions from the `ids` array.", () => {
-
-    const actual = calculateTotalFromIDs(concessionsData, "rNVCeVsri")
-    const expected = 6114;
+    const ids = ["0Qs9Yp2NL", "NEHAsbTYk"]
+    const actual = calculateTotalFromIDs(concessions, ids)
+    const expected = 1778;
     expect(actual).toStrictEqual(expected);
 
 
-  })
+  });
 
 });

@@ -19,9 +19,9 @@ describe("getTicketByName", () => {
 describe("getTicketByName", () => {
 
     test("Should return the object associated with ticket name", () => {
-
-        const actual = getTicketByName(tickets, "Adult Regular")
-        const expected = { id: "6uD_PoicNN", name: "Adult Regular", priceInCents: 1369 };
+        const name = "Adult Regular"
+        const actual = getTicketByName(tickets, name)
+        const expected = { id: "uD_PoicNN", name: "Adult Regular", priceInCents: 1369 };
         expect(actual).toStrictEqual(expected);
     });
 
@@ -30,9 +30,9 @@ describe("getTicketByName", () => {
 describe("calculateTotalFromTicketNames", () => {
 
     test("The total value of all tickets from the `names` array", () => {
-
-        const actual = calculateTotalFromTicketNames(tickets, "Adult Regular")
-        const expected = 6114;
+        const names = ["Adult Regular", "Senior Regular"]
+        const actual = calculateTotalFromTicketNames(tickets, names)
+        const expected = 2588;
         expect(actual).toStrictEqual(expected);
     });
 });
