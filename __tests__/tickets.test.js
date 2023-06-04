@@ -25,20 +25,23 @@ describe('getTicketByName()', () => {
 });
 
 describe('calculateTotalFromTicketNames()', () => {
-	it('returns a ticket object when given the name.', () => {
-		const input = 'Adult Regular';
+	it('should calculate and return a `total` based on the given ticket names', () => {
+		const input = [
+			'Adult Matinee',
+			'Senior Matinee',
+			'Child Matinee',
+			'Adult Regular',
+			'Senior Regular',
+			'Child Regular',
+		];
 		const actual = calculateTotalFromTicketNames(tickets, input);
-		const expected = {
-			id: 'uD_PoicNN',
-			name: 'Adult Regular',
-			priceInCents: 1369,
-		};
+		const expected = 6114;
 		expect(actual).toEqual(expected);
 	});
-	it(`returns 'null' if no object is found`, () => {
-		const input = 'Child Special';
+	it(`returns zero if tickets aren't found by name`, () => {
+		const input = ['Child Special'];
 		const actual = calculateTotalFromTicketNames(tickets, input);
-		const expected = null;
+		const expected = 0;
 		expect(actual).toEqual(expected);
 	});
 });
