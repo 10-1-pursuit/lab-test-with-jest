@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-		"concessions": "node ./src/concessions"
+		"concessions": "node ./src/concessions",
+		"tickets": "node ./src/tickets"
   },
   "keywords": [],
   "author": "Michael Kleemoff",
