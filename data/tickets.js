@@ -6,3 +6,6 @@ module.exports = [
   { id: "TQh2t6HWf", name: "Senior Regular", priceInCents: 1219 },
   { id: "B8v5R2nVQ", name: "Child Regular", priceInCents: 1069 },
 ];
+
+
+const tickets = require("../data/tickets")
