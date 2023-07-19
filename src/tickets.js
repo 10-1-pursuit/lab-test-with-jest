@@ -19,6 +19,9 @@ function getTicketByName(tickets, name) {
  * @returns The total value of all tickets from the `names` array.
  */
 function calculateTotalFromTicketNames(tickets, names) {
+  if (names.length === 0) {
+    return null; // Return null when the names array is empty
+  }
   let total = 0;
   for (let name of names) {
     const ticket = getTicketByName(tickets, name);
@@ -26,5 +29,8 @@ function calculateTotalFromTicketNames(tickets, names) {
       total += ticket.priceInCents;
     }
   }
-  return total;
+  return total; 
 }
+
+module.exports = getTicketByName;
+module.exports = calculateTotalFromTicketNames;
