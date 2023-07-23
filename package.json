@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "Hello": "console.log('Hello')",
+    "test": "jest" 
   },
   "keywords": [],
   "author": "",
